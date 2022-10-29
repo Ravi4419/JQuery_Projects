@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: rgb(94, 116, 240);
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: rgb(150, 202, 253);
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(19, 121, 224, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: rgb(118, 120, 123);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .admin {
+      margin-top: 0%;
+    }
+
+    .side {
+      margin-left: 88%;
+    }
+
+    .side .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+
+
+    .side .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 12px 14px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+
+    .side-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(19, 121, 224, 0.2);
+      z-index: 1;
+    }
+
+    .side-content a {
+      float: none;
+      color: rgb(118, 120, 123);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .side-content a:hover {
+      background-color: #ddd;
+    }
+
+    .side:hover .dropdown-content {
+      display: block;
+    }
+
+    .fname{
+        margin-top: 10%;
+        margin-left: 29%;
+    }
+
+    #ban{
+        margin-left: 20%;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="EaseMyTrip.jpg" width="60px" height="50px" style="margin-right:20%;">
+  <center>
+    <div class="admin">
+      <a>Welcome in HactoberFest 2022</a>
+    </div>
+  </center>
+  <div class="navbar">
+    <a href="#home">Flight</a>
+    <div class="dropdown">
+      <button class="dropbtn">Booking List
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Air Booking list</a>
+        <a href="#">Bus Booking list</a>
+        <a href="#">Hotel Booking list</a>
+        <a href="#">Train Booking list</a>
+        <a id="op" href="Pnr.html">File TDR</a>
+        <a href="#">Train Search history</a>
+        <a href="#">Train Refund histroy</a>
+      </div>
+    </div>
+    <a href="#hotel" style="margin-left:1% ;">Hotel</a>
+    <a href="#bus" style="margin-left:1% ;">Bus</a>
+    <a href="#transfer" style="margin-left:1% ;">Transfer</a>
+    <div class="side">
+      <button class="dropbtn" style="margin-right:52px;">Admin
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Add Markup After Booking</a>
+        <a href="#">Refund List</a>
+        <a href="#">Cancelled Booking list</a>
+        <a href="#">Cancel Request List</a>
+        <a href="#">Set Markup</a>
+        <a href="#">Show Commission Details</a>
+        <a href="#">Set Markup</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <input  type="text" class="fname" placeholder="Enter the First Name">
+  <input type="text" class="laname" placeholder="Enter the Last Name">
+  <button class="sub" onclick=bus() >Submit</button>
+  <h3 id="ban"></h3>
+
+
+
+</body>
+
+<Script>
+
+function bus(){
+    var x =$(".fname").val();
+    var y=$(".laname").val();
+    $("#ban").html(x+y);
+
+}
+</Script>
+
+</html>
